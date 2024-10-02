@@ -3,9 +3,14 @@ package dispositivos.computadora;
 import dispositivos.*;
 
 public class Computadora extends DispositivoElectronico{
-    protected String CPU;
-    protected int RAM;
-    protected int memoria;
+    protected final String CPU;
+    protected final int RAM;
+    protected final int memoria;
+
+    /**
+     * Constructor de la clase Computadora
+     * @param (CPU, RAM, memoria) son los argumentos del constructor que no pertenecen a clases ancestro
+     */
 
     public Computadora(String marca, boolean isPremium, String CPU, int RAM, int memoria) {
         super(marca, isPremium);
@@ -13,7 +18,5 @@ public class Computadora extends DispositivoElectronico{
         this.RAM = RAM;
         this.memoria = memoria;
     }
-
-
 
 }

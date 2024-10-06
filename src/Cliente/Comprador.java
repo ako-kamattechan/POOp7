@@ -1,3 +1,5 @@
+package Cliente;
+
 public class Comprador extends Cliente {
     private static final int LIMITE_COMPRAS_VIP = 10;
 

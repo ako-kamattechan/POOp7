@@ -1,3 +1,5 @@
+package Cliente;
+
 public class ClienteVip extends Cliente {
     private int descuento = 20; 
     protected int puntos;

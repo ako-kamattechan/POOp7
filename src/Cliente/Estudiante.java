@@ -1,3 +1,5 @@
+package Cliente;
+
 public class Estudiante extends Cliente {
     private int descuento = 10; 
     protected String numeroCuenta;

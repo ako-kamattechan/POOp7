@@ -44,7 +44,7 @@ public class Main {
         for(int i = 0; i < tienda.clientes.get(0).size(); i++){
             estudianteAux = (Estudiante)tienda.clientes.get(0).get(i);
             if(estudianteAux.getNumCliente() == numClienteAux){
-                menu();
+                menu(estudianteAux);
                 return;
             }
         }
@@ -52,7 +52,7 @@ public class Main {
         for(int i = 0; i < tienda.clientes.get(1).size(); i++){
             compradorAux = (Comprador)tienda.clientes.get(1).get(i);
             if(compradorAux.getNumCliente() == numClienteAux){
-                menu();
+                menu(compradorAux);
                 return;
             }
         }
@@ -60,7 +60,7 @@ public class Main {
         for(int i = 0; i < tienda.clientes.get(2).size(); i++){
             clienteVipAux = (ClienteVip) tienda.clientes.get(2).get(i);
             if(clienteVipAux.getNumCliente() == numClienteAux){
-                menu();
+                menu(clienteVipAux);
                 return;
             }
         }
@@ -69,7 +69,17 @@ public class Main {
 
     }
 
-    private static void menu(){
+    private static void menu(ClienteVip cliente) {
+        System.out.println("Bienvenido al sistema");
+        Scanner sc = new Scanner(System.in);
+    }
+
+    private static void menu(Estudiante cliente) {
+        System.out.println("Bienvenido al sistema");
+        Scanner sc = new Scanner(System.in);
+    }
+
+    private static void menu(Comprador cliente) {
         System.out.println("Bienvenido al sistema");
         Scanner sc = new Scanner(System.in);
     }

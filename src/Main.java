@@ -11,8 +11,9 @@ import tienda.dispositivos.computadora.pc.PC;
 import java.util.Scanner;
 
 public class Main {
+    public static Tienda tienda = new Tienda();
+
     public static void main(String[] args) {
-        Tienda tienda = new Tienda();
 
         tienda.anadirArticuloAInventario(new PC("PC Gamer ultra pro", "PCgamer", false, 2500, "AMD Ryzen 5", 12, 2048, "RTX 3080"));
         tienda.anadirArticuloAInventario(new Laptop("Thinkpad", "Lenovo", false, 1500, "AMD Ryzen 5", 16, 1024, 56));
@@ -26,11 +27,11 @@ public class Main {
 
 
 
-
+        ingresarSesion();
 
     }
 
-    private static void ingresarSesion(Tienda tienda) {
+    private static void ingresarSesion() {
         System.out.println("Ingrese el tipo de cliente que es: ");
         System.out.println("1.- Comprador");
         System.out.println("2.- Estudiante");
@@ -107,16 +108,32 @@ public class Main {
     private static void menu(ClienteVip cliente) {
         System.out.println("Bienvenido al sistema");
         Scanner sc = new Scanner(System.in);
+
+        System.out.println("1.- Imprimir inventario");
+        switch (sc.nextInt()) {
+            case 1->{tienda.imprimirInventario();}
+        }
+
     }
 
     private static void menu(Estudiante cliente) {
         System.out.println("Bienvenido al sistema");
         Scanner sc = new Scanner(System.in);
+
+        System.out.println("1.- Imprimir inventario");
+        switch (sc.nextInt()) {
+            case 1->{tienda.imprimirInventario();}
+        }
     }
 
     private static void menu(Comprador cliente) {
         System.out.println("Bienvenido al sistema");
         Scanner sc = new Scanner(System.in);
+
+        System.out.println("1.- Imprimir inventario");
+        switch (sc.nextInt()) {
+            case 1->{tienda.imprimirInventario();}
+        }
     }
 
 }

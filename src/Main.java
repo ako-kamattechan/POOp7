@@ -31,43 +31,78 @@ public class Main {
     }
 
     private static void ingresarSesion(Tienda tienda) {
-        System.out.println("Ingrese su número de cliente");
+        System.out.println("Ingrese el tipo de cliente que es: ");
+        System.out.println("1.- Comprador");
+        System.out.println("2.- Estudiante");
+        System.out.println("3.- ClienteVip");
         Scanner sc = new Scanner(System.in);
-
-        int numClienteAux = sc.nextInt();
 
         Comprador compradorAux;
         ClienteVip clienteVipAux;
         Estudiante estudianteAux;
 
+        estudianteAux = (Estudiante)tienda.clientes.get(0).get(0);
 
-        for(int i = 0; i < tienda.clientes.get(0).size(); i++){
-            estudianteAux = (Estudiante)tienda.clientes.get(0).get(i);
-            if(estudianteAux.getNumCliente() == numClienteAux){
-                menu(estudianteAux);
-                return;
+        compradorAux = (Comprador)tienda.clientes.get(1).get(0);
+
+        clienteVipAux = (ClienteVip) tienda.clientes.get(2).get(0);
+
+
+        while(true) {
+            switch (sc.nextInt()) {
+                case 1:
+                    menu(compradorAux);
+                    return;
+                case 2:
+                    menu(estudianteAux);
+                    return;
+                case 3:
+                    menu(clienteVipAux);
+                    return;
+                default:
+                    System.out.println("Opción inválida");
             }
         }
-
-        for(int i = 0; i < tienda.clientes.get(1).size(); i++){
-            compradorAux = (Comprador)tienda.clientes.get(1).get(i);
-            if(compradorAux.getNumCliente() == numClienteAux){
-                menu(compradorAux);
-                return;
-            }
-        }
-
-        for(int i = 0; i < tienda.clientes.get(2).size(); i++){
-            clienteVipAux = (ClienteVip) tienda.clientes.get(2).get(i);
-            if(clienteVipAux.getNumCliente() == numClienteAux){
-                menu(clienteVipAux);
-                return;
-            }
-        }
-
-        System.out.println("No se ha encontrado el cliente");
-
     }
+
+//    private static void ingresarSesion(Tienda tienda) {
+//        System.out.println("Ingrese su número de cliente");
+//        Scanner sc = new Scanner(System.in);
+//
+//        int numClienteAux = sc.nextInt();
+//
+//        Comprador compradorAux;
+//        ClienteVip clienteVipAux;
+//        Estudiante estudianteAux;
+//
+//
+//        for(int i = 0; i < tienda.clientes.get(0).size(); i++){
+//            estudianteAux = (Estudiante)tienda.clientes.get(0).get(i);
+//            if(estudianteAux.getNumCliente() == numClienteAux){
+//                menu(estudianteAux);
+//                return;
+//            }
+//        }
+//
+//        for(int i = 0; i < tienda.clientes.get(1).size(); i++){
+//            compradorAux = (Comprador)tienda.clientes.get(1).get(i);
+//            if(compradorAux.getNumCliente() == numClienteAux){
+//                menu(compradorAux);
+//                return;
+//            }
+//        }
+//
+//        for(int i = 0; i < tienda.clientes.get(2).size(); i++){
+//            clienteVipAux = (ClienteVip) tienda.clientes.get(2).get(i);
+//            if(clienteVipAux.getNumCliente() == numClienteAux){
+//                menu(clienteVipAux);
+//                return;
+//            }
+//        }
+//
+//        System.out.println("No se ha encontrado el cliente");
+//
+//    }
 
     private static void menu(ClienteVip cliente) {
         System.out.println("Bienvenido al sistema");

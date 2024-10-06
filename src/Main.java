@@ -48,7 +48,6 @@ public class Main {
 
         clienteVipAux = (ClienteVip) tienda.clientes.get(2).get(0);
 
-
         while(true) {
             switch (sc.nextInt()) {
                 case 1:

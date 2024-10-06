@@ -1,12 +1,12 @@
-package dispositivos.computadora.pc;
+package tienda.dispositivos.computadora.pc;
 
-import dispositivos.computadora.Computadora;
+import tienda.dispositivos.computadora.Computadora;
 
 public class PC extends Computadora {
     private String tarjetaGrafica;
 
-    public PC(String marca, boolean isPremium, double precio, String CPU, int RAM, int memoria, String tarjetaGrafica){
-        super(marca, isPremium, precio, CPU, RAM, memoria);
+    public PC(String nombre,String marca, boolean isPremium, double precio, String CPU, int RAM, int memoria, String tarjetaGrafica){
+        super(nombre, marca, isPremium, precio, CPU, RAM, memoria);
         this.tarjetaGrafica = tarjetaGrafica;
     }
 

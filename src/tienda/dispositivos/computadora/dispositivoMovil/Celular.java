@@ -1,12 +1,12 @@
-package dispositivos.computadora.dispositivoMovil;
+package tienda.dispositivos.computadora.dispositivoMovil;
 
 import utils.RandNum;
 
 public class Celular extends DispositivoMovil{
     private String numCelular;
 
-    public Celular(String marca, boolean isPremium, double precio, String CPU, int RAM, int memoria, int resolucionCamaraFrontal, int resolucionCamaraBack, int porcentajeBateria, String numCelular) {
-        super(marca, isPremium, precio, CPU, RAM, memoria, resolucionCamaraFrontal, resolucionCamaraBack, porcentajeBateria);
+    public Celular(String nombre, String marca, boolean isPremium, double precio, String CPU, int RAM, int memoria, int resolucionCamaraFrontal, int resolucionCamaraBack, int porcentajeBateria, String numCelular) {
+        super(nombre, marca, isPremium, precio, CPU, RAM, memoria, resolucionCamaraFrontal, resolucionCamaraBack, porcentajeBateria);
         this.numCelular = numCelular;
     }
 

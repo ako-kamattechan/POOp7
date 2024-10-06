@@ -1,6 +1,6 @@
-package dispositivos.computadora.pc;
+package tienda.dispositivos.computadora.pc;
 
-import dispositivos.computadora.Computadora;
+import tienda.dispositivos.computadora.Computadora;
 
 public class Laptop extends Computadora {
     private int porcentajeBateria;
@@ -10,8 +10,8 @@ public class Laptop extends Computadora {
      * @param (porcentajeBateria, precio) son los argumentos del constructor (que no pertenecen a clases ancestro)
      */
 
-    public Laptop(String marca, boolean isPremium, double precio, String CPU, int RAM, int memoria, int porcentajeBateria){
-        super(marca, isPremium, precio, CPU, RAM, memoria);
+    public Laptop(String nombre, String marca, boolean isPremium, double precio, String CPU, int RAM, int memoria, int porcentajeBateria){
+        super(nombre, marca, isPremium, precio, CPU, RAM, memoria);
         this.porcentajeBateria = porcentajeBateria;
     }
 

@@ -1,6 +1,10 @@
 package tienda.clientes;
 
-import tienda.dispositivos.*;
+import tienda.dispositivos.DispositivoElectronico;
+import tienda.dispositivos.computadora.dispositivoMovil.Celular;
+import tienda.dispositivos.computadora.dispositivoMovil.Tablet;
+import tienda.dispositivos.computadora.pc.Laptop;
+import tienda.dispositivos.computadora.pc.PC;
 
 public class Carrito{
     private String dispositivo;
@@ -27,7 +31,8 @@ public class Carrito{
         this.costo = costo;
     }
 
-    public String toString(DispositivoElectronico dispositivoElectronico) {
-        return "Artículo: " + dispositivoElectronico.getNombre() + ", Precio: $" + dispositivoElectronico.getPrecio();
+    @Override
+    public String toString() {
+        return "Artículo: " + dispositivo + ", Precio: $" + costo;
     }
 }

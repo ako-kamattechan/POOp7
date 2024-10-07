@@ -31,13 +31,5 @@ public class Estudiante extends Cliente {
         this.nombreUniversidad = nombreUniversidad;
     }
 
-    @Override
-    public void comprarArticulo(double precio) {
-        double precioConDescuento = precio * (1 - this.descuento);
-        System.out.println(nombre + " ha comprado un artículo por $" + precioConDescuento + " con descuento VIP.");
-        numCompras++;
-        System.out.println("Total de compras: " + numCompras);
-    }
-
 
 }
